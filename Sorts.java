@@ -1,6 +1,6 @@
 public class Sorts{
 
-  public static void selectionsort(int [] ary) {
+  public static void selectionSort(int [] ary) {
     // looping through the first time
     for (int i = 0; i < ary.length; i++) {
       // original keeps track of the value at the first index
@@ -21,6 +21,5 @@ public class Sorts{
       ary[indexKeeper] = original;
     }
   }
-
-
+     
 }
