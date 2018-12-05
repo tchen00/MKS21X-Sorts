@@ -6,17 +6,19 @@ public class Sorts{
       // original keeps track of the value at the first index
       int original = ary[i];
       // criteria has two things, the minimum and the index of the min
-      int[] criteria = new int[] {original, i};
+      int min = original;
+      int indexKeeper = i;
+      //int[] criteria = new int[] {original, i};
       for (int j = i + 1; j < ary.length; j++) {
         // checks to see the the value at index j is smaller than that of the criteria right now
-        if (ary[j] < criteria[0]) {
-          criteria[0] = ary[j];
-          criteria[1] = j;
+        if (ary[j] < min) {
+          min = ary[j];
+          indexKeeper = j;
         }
       }
       // replace + repeat once again
-      ary[i] = criteria[0];
-      ary[criteria[1]] = original;
+      ary[i] = min;
+      ary[indexKeeper] = original;
     }
   }
 
