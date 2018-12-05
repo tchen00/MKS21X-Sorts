@@ -1,4 +1,4 @@
-public class sorts{
+public class Sorts{
 
   public static void selectionsort(int [] ary) {
     // looping through the first time
@@ -14,7 +14,7 @@ public class sorts{
           criteria[1] = j;
         }
       }
-      // replace + repeat once again 
+      // replace + repeat once again
       ary[i] = criteria[0];
       ary[criteria[1]] = original;
     }
