@@ -1,5 +1,8 @@
 public class Sorts{
-
+  /**Selection sort of an int array.
+  *Upon completion, the elements of the array will be in increasing order.
+  *@param data  the elements to be sorted.
+  */
   public static void selectionSort(int [] ary) {
     // looping through the first time
     for (int i = 0; i < ary.length; i++) {
@@ -21,5 +24,21 @@ public class Sorts{
       ary[indexKeeper] = original;
     }
   }
-     
+    /**Bubble sort of an int array.
+      *Upon completion, the elements of the array will be in increasing order.
+      *@param data  the elements to be sorted.
+      */
+    public static void bubbleSort(int[] data){
+      boolean swap = false;
+      for (int i = 0; i < data.length - 1; i++) {
+        if (data[i] > data[i+1]){
+          int old = data[i];
+          data[i] = data[i+1];
+          data[i+1] = old;
+          swap = true;
+        }
+      }
+
+    }
+
 }
