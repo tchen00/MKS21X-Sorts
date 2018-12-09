@@ -1,10 +1,35 @@
 import java.io.*;
 import java.util.*;
+
 public class Sorts{
   /**Selection sort of an int array.
   *Upon completion, the elements of the array will be in increasing order.
   *@param data  the elements to be sorted.
   */
+  public static void main(String[] args) {
+    int num = Integer.parseInt(args[0]);
+    int[] ary = new int[num];
+    Random rand = new Random();
+    for (int i = 0; i < num; i++){
+      ary[i] = rand.nextInt()%100;
+    }
+    if (args[1].equals("selection")){
+      long startTime = System.currentTimeMillis();
+      Sorts.selectionSort(ary);
+      long endTime = System.currentTimeMillis();
+      long timeElapsed = endTime - startTime;
+      System.out.println("Execution time in milliseconds: " + timeElapsed);
+      //System.out.println(Arrays.toString(ary));
+    }
+    if (args[1].equals("bubble")){
+      long startTime = System.currentTimeMillis();
+      Sorts.bubbleSort(ary);
+      //System.out.println(Arrays.toString(ary));
+      long endTime = System.currentTimeMillis();
+      long timeElapsed = endTime - startTime;
+      System.out.println("Execution time in milliseconds: " + timeElapsed);
+    }
+  }
   public static void selectionSort(int [] ary) {
     // looping through the first time
     for (int i = 0; i < ary.length; i++) {
