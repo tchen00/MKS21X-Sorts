@@ -15,6 +15,7 @@ public class Sorts{
     }
     if (args[1].equals("selection")){
       long startTime = System.currentTimeMillis();
+      System.out.println(Arrays.toString(ary));
       Sorts.selectionSort(ary);
       long endTime = System.currentTimeMillis();
       long timeElapsed = endTime - startTime;
@@ -23,7 +24,9 @@ public class Sorts{
     }
     if (args[1].equals("bubble")){
       long startTime = System.currentTimeMillis();
+      System.out.println(Arrays.toString(ary));
       Sorts.bubbleSort(ary);
+
       //System.out.println(Arrays.toString(ary));
       long endTime = System.currentTimeMillis();
       long timeElapsed = endTime - startTime;
@@ -66,6 +69,7 @@ public class Sorts{
             int temp = data[j+1];
             data[j+1] = data[j];
             data[j] = temp;
+            // System.out.println(Arrays.toString(data)); // for testing code
           }
         }
       }
