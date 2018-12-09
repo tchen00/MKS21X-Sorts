@@ -1,3 +1,5 @@
+import java.io.*;
+import java.util.*;
 public class Sorts{
   /**Selection sort of an int array.
   *Upon completion, the elements of the array will be in increasing order.
@@ -29,18 +31,18 @@ public class Sorts{
       *@param data  the elements to be sorted.
       */
     public static void bubbleSort(int[] data){
-      boolean swap = true;
-      while (swap) {
-        for (int i = 0; i < data.length - 1; i++) {
-          if (data[i] > data[i+1] && i != data.length - 1){
-            int old = data[i];
-            data[i] = data[i+1];
-            data[i+1] = old;
-            //swap = true;
-          } if (i == data.length - 1 && !swap && data[i] <= data[i+1]){
-            swap = false;
+      //making j 1 less than data --> no errors returned (end is always the largest after each loop )
+      for (int i = data.length -1; i > 0; i--) {
+        //looping through array until i
+        for (int j = 0; j < i; j++) {
+          // check
+          if (data[j] > data[j+1]) {
+            //need a temp bc data[j+1] will be replaced
+            int temp = data[j+1];
+            data[j+1] = data[j];
+            data[j] = temp;
           }
         }
+      }
     }
-}
-}
+  }
