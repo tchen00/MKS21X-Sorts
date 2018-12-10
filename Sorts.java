@@ -74,4 +74,8 @@ public class Sorts{
         }
       }
     }
+
+    public static void insertionSort(int[] data){
+
+    }
   }
