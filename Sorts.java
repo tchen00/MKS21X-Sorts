@@ -76,6 +76,14 @@ public class Sorts{
     }
 
     public static void insertionSort(int[] data){
-
+      for (int i = 1; i < data.length; i++){
+        int orig = data[i];
+        int c = i;
+        while (c > 0 && orig < data[c - 1]){
+            data[c] = data[c - 1];
+            c--;
+        }
+        data[c] = orig;
+      }
     }
   }
